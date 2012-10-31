@@ -1,0 +1,31 @@
+<h1>Listing academics</h1>
+
+<table>
+  <tr>
+    <th>Qualification</th>
+    <th>Institute</th>
+    <th>Percentage</th>
+    <th>Year of passout</th>
+    <th>User</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @academics.each do |academic| %>
+  <tr>
+    <td><%= academic.qualification %></td>
+    <td><%= academic.institute %></td>
+    <td><%= academic.percentage %></td>
+    <td><%= academic.year_of_passout %></td>
+    <td><%= academic.user_id %></td>
+    <td><%= link_to 'Show', academic %></td>
+    <td><%= link_to 'Edit', edit_academic_path(academic) %></td>
+    <td><%= link_to 'Destroy', academic, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Academic', new_academic_path %>

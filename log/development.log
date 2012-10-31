@@ -1,0 +1,731 @@
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2012-10-30 22:46:45 +0530
+Served asset /rails.png - 304 Not Modified (2ms)
+
+
+Started GET "/resumes" for 127.0.0.1 at 2012-10-30 22:47:16 +0530
+Processing by ResumesController#index as HTML
+  [1m[36mResume Load (0.1ms)[0m  [1mSELECT `resumes`.* FROM `resumes` [0m
+  Rendered resumes/index.html.erb within layouts/application (16.6ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Completed 200 OK in 134ms (Views: 80.9ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-30 22:47:16 +0530
+Served asset /application.css - 304 Not Modified (11ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-30 22:47:16 +0530
+Served asset /jquery.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/resumes.css?body=1" for 127.0.0.1 at 2012-10-30 22:47:16 +0530
+Served asset /resumes.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-10-30 22:47:16 +0530
+Served asset /scaffolds.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-30 22:47:16 +0530
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/resumes.js?body=1" for 127.0.0.1 at 2012-10-30 22:47:16 +0530
+Served asset /resumes.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-30 22:47:16 +0530
+Served asset /application.js - 304 Not Modified (24ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2012-10-30 22:47:36 +0530
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"E/2uXAy8ImdTsVMkg1xA65UlgzHLnOLJbU4xE/s2rjo="}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 65ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2012-10-30 22:47:36 +0530
+Served asset /rails.png - 304 Not Modified (0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2012-10-30 22:47:46 +0530
+Processing by Devise::SessionsController#new as HTML
+  Rendered /var/lib/gems/1.9.1/gems/devise-2.1.2/app/views/devise/shared/_links.erb (1.4ms)
+  Rendered /var/lib/gems/1.9.1/gems/devise-2.1.2/app/views/devise/sessions/new.html.erb within layouts/application (27.8ms)
+Completed 200 OK in 91ms (Views: 88.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-30 22:47:46 +0530
+Served asset /application.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-10-30 22:47:46 +0530
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/resumes.css?body=1" for 127.0.0.1 at 2012-10-30 22:47:46 +0530
+Served asset /resumes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-30 22:47:46 +0530
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/resumes.js?body=1" for 127.0.0.1 at 2012-10-30 22:47:46 +0530
+Served asset /resumes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-30 22:47:46 +0530
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-30 22:47:46 +0530
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2012-10-30 22:48:03 +0530
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vFj6c1USyKurRxXgzUjX86TscnsHYbM9iWSsGZZjvMs=", "user"=>{"email"=>"rupu.urs@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`email` = 'rupu.urs@gmail.com' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.9ms)[0m  UPDATE `users` SET `current_sign_in_at` = '2012-10-30 17:18:03', `sign_in_count` = 2, `updated_at` = '2012-10-30 17:18:03' WHERE `users`.`id` = 1
+  [1m[36m (66.2ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 191ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2012-10-30 22:48:03 +0530
+Served asset /rails.png - 304 Not Modified (0ms)
+
+
+Started GET "/resumes" for 127.0.0.1 at 2012-10-30 22:48:16 +0530
+Processing by ResumesController#index as HTML
+  [1m[35mResume Load (0.3ms)[0m  SELECT `resumes`.* FROM `resumes` 
+  Rendered resumes/index.html.erb within layouts/application (0.3ms)
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed 200 OK in 13ms (Views: 10.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-30 22:48:16 +0530
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-10-30 22:48:16 +0530
+Served asset /scaffolds.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/resumes.css?body=1" for 127.0.0.1 at 2012-10-30 22:48:16 +0530
+Served asset /resumes.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-30 22:48:16 +0530
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-30 22:48:16 +0530
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/resumes.js?body=1" for 127.0.0.1 at 2012-10-30 22:48:16 +0530
+Served asset /resumes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-30 22:48:16 +0530
+Served asset /application.js - 304 Not Modified (1ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2012-10-30 22:49:36 +0530
+Served asset /rails.png - 304 Not Modified (0ms)
+
+
+Started GET "/resumes" for 127.0.0.1 at 2012-10-30 22:49:48 +0530
+Processing by ResumesController#index as HTML
+  [1m[35mResume Load (0.2ms)[0m  SELECT `resumes`.* FROM `resumes` 
+  Rendered resumes/index.html.erb within layouts/application (0.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed 200 OK in 12ms (Views: 10.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-30 22:49:48 +0530
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/resumes.css?body=1" for 127.0.0.1 at 2012-10-30 22:49:48 +0530
+Served asset /resumes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-10-30 22:49:48 +0530
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-30 22:49:48 +0530
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-30 22:49:48 +0530
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/resumes.js?body=1" for 127.0.0.1 at 2012-10-30 22:49:48 +0530
+Served asset /resumes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-30 22:49:48 +0530
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2012-10-30 23:05:10 +0530
+Served asset /rails.png - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-31 14:46:16 +0530
+
+ActionController::RoutingError (uninitialized constant ResumeController):
+  activesupport (3.2.8) lib/active_support/inflector/methods.rb:230:in `block in constantize'
+  activesupport (3.2.8) lib/active_support/inflector/methods.rb:229:in `each'
+  activesupport (3.2.8) lib/active_support/inflector/methods.rb:229:in `constantize'
+  actionpack (3.2.8) lib/action_dispatch/routing/route_set.rb:69:in `controller_reference'
+  actionpack (3.2.8) lib/action_dispatch/routing/route_set.rb:54:in `controller'
+  actionpack (3.2.8) lib/action_dispatch/routing/route_set.rb:32:in `call'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `each'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.8) lib/action_dispatch/routing/route_set.rb:600:in `call'
+  warden (1.2.1) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.1) lib/warden/manager.rb:34:in `catch'
+  warden (1.2.1) lib/warden/manager.rb:34:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.1) lib/rack/etag.rb:23:in `call'
+  rack (1.4.1) lib/rack/conditionalget.rb:25:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.1) lib/rack/session/abstract/id.rb:205:in `context'
+  rack (1.4.1) lib/rack/session/abstract/id.rb:200:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/cookies.rb:339:in `call'
+  activerecord (3.2.8) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:473:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:405:in `_run__1673327777228850383__call__1743124352369243768__callbacks'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.8) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-31 14:46:57 +0530
+Processing by ResumesController#index as HTML
+  [1m[36mResume Load (0.5ms)[0m  [1mSELECT `resumes`.* FROM `resumes` [0m
+  Rendered resumes/index.html.erb within layouts/application (0.9ms)
+  [1m[35mUser Load (0.5ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Completed 200 OK in 249ms (Views: 170.6ms | ActiveRecord: 5.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-31 14:46:58 +0530
+Served asset /application.css - 200 OK (27ms)
+
+
+Started GET "/assets/resumes.css?body=1" for 127.0.0.1 at 2012-10-31 14:46:58 +0530
+Served asset /resumes.css - 200 OK (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-10-31 14:46:58 +0530
+Served asset /scaffolds.css - 200 OK (4ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-31 14:46:58 +0530
+Served asset /jquery.js - 200 OK (7ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-31 14:46:58 +0530
+Served asset /jquery_ujs.js - 200 OK (3ms)
+
+
+Started GET "/assets/resumes.js?body=1" for 127.0.0.1 at 2012-10-31 14:46:58 +0530
+Served asset /resumes.js - 200 OK (3ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-31 14:46:58 +0530
+Served asset /application.js - 200 OK (4ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2012-10-31 14:47:21 +0530
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"vFj6c1USyKurRxXgzUjX86TscnsHYbM9iWSsGZZjvMs="}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 84ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-31 14:47:21 +0530
+Processing by ResumesController#index as HTML
+  [1m[35mResume Load (0.3ms)[0m  SELECT `resumes`.* FROM `resumes` 
+  Rendered resumes/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 10ms (Views: 7.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-31 14:47:21 +0530
+Served asset /jquery.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/resumes.css?body=1" for 127.0.0.1 at 2012-10-31 14:47:21 +0530
+Served asset /resumes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-10-31 14:47:21 +0530
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/resumes.js?body=1" for 127.0.0.1 at 2012-10-31 14:47:21 +0530
+Served asset /resumes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-31 14:47:21 +0530
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-31 14:47:21 +0530
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-31 14:47:21 +0530
+Served asset /application.js - 304 Not Modified (1ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-31 14:58:31 +0530
+Processing by ResumesController#index as HTML
+  [1m[36mResume Load (0.1ms)[0m  [1mSELECT `resumes`.* FROM `resumes` [0m
+  Rendered resumes/index.html.erb within layouts/application (16.9ms)
+Completed 200 OK in 82ms (Views: 36.9ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-31 14:58:32 +0530
+Served asset /application.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/resumes.css?body=1" for 127.0.0.1 at 2012-10-31 14:58:32 +0530
+Served asset /resumes.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-31 14:58:32 +0530
+Served asset /jquery.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-10-31 14:58:32 +0530
+Served asset /scaffolds.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-31 14:58:32 +0530
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/resumes.js?body=1" for 127.0.0.1 at 2012-10-31 14:58:32 +0530
+Served asset /resumes.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-31 14:58:32 +0530
+Served asset /application.js - 304 Not Modified (5ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (92.7ms)[0m  [1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (301.4ms)[0m  CREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)
+  [1m[36m (0.5ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Migrating to DeviseCreateUsers (20121025174612)
+  [1m[35m (83.1ms)[0m  CREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `email` varchar(255) DEFAULT '' NOT NULL, `password` varchar(255) DEFAULT '' NOT NULL, `encrypted_password` varchar(255) DEFAULT '' NOT NULL, `reset_password_token` varchar(255), `reset_password_sent_at` datetime, `remember_created_at` datetime, `sign_in_count` int(11) DEFAULT 0, `current_sign_in_at` datetime, `last_sign_in_at` datetime, `current_sign_in_ip` varchar(255), `last_sign_in_ip` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (143.5ms)[0m  [1mCREATE UNIQUE INDEX `index_users_on_email` ON `users` (`email`)[0m
+  [1m[35m (190.4ms)[0m  CREATE UNIQUE INDEX `index_users_on_reset_password_token` ON `users` (`reset_password_token`)
+  [1m[36m (32.1ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20121025174612')[0m
+Migrating to CreateResumes (20121030165629)
+  [1m[35m (87.0ms)[0m  CREATE TABLE `resumes` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT '' NOT NULL, `summary` text, `phone_number` int(11) DEFAULT 0 NOT NULL, `email_id` varchar(255) DEFAULT '' NOT NULL, `date_of_birth` varchar(255) DEFAULT '' NOT NULL, `experience` float DEFAULT 0 NOT NULL, `user_id` int(11) NOT NULL, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (155.2ms)[0m  [1mCREATE UNIQUE INDEX `index_resumes_on_name` ON `resumes` (`name`)[0m
+  [1m[35m (143.5ms)[0m  CREATE UNIQUE INDEX `index_resumes_on_user_id` ON `resumes` (`user_id`)
+  [1m[36m (143.2ms)[0m  [1mCREATE UNIQUE INDEX `index_resumes_on_experience` ON `resumes` (`experience`)[0m
+  [1m[35m (31.8ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20121030165629')
+Migrating to CreateSkills (20121031092927)
+  [1m[36m (110.1ms)[0m  [1mCREATE TABLE `skills` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `skill_name` varchar(255) DEFAULT '' NOT NULL, `user_id` int(11) NOT NULL, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (154.8ms)[0m  CREATE UNIQUE INDEX `index_skills_on_skill_name` ON `skills` (`skill_name`)
+  [1m[36m (154.6ms)[0m  [1mCREATE UNIQUE INDEX `index_skills_on_user_id` ON `skills` (`user_id`)[0m
+  [1m[35m (34.9ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20121031092927')
+Migrating to CreateAcademics (20121031093103)
+  [1m[36m (98.4ms)[0m  [1mCREATE TABLE `academics` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `qualification` varchar(255) DEFAULT '' NOT NULL, `institute` varchar(255) DEFAULT '' NOT NULL, `percentage` float DEFAULT 0.0 NOT NULL, `year_of_passout` int(11) DEFAULT 0 NOT NULL, `user_id` int(11) NOT NULL, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (154.7ms)[0m  CREATE UNIQUE INDEX `index_academics_on_qualification` ON `academics` (`qualification`)
+  [1m[36m (154.4ms)[0m  [1mCREATE UNIQUE INDEX `index_academics_on_institute` ON `academics` (`institute`)[0m
+  [1m[35m (154.4ms)[0m  CREATE UNIQUE INDEX `index_academics_on_percentage` ON `academics` (`percentage`)
+  [1m[36m (154.2ms)[0m  [1mCREATE UNIQUE INDEX `index_academics_on_year_of_passout` ON `academics` (`year_of_passout`)[0m
+  [1m[35m (154.5ms)[0m  CREATE UNIQUE INDEX `index_academics_on_user_id` ON `academics` (`user_id`)
+  [1m[36m (43.2ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20121031093103')[0m
+  [1m[35m (0.3ms)[0m  SELECT `schema_migrations`.`version` FROM `schema_migrations` 
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-31 15:15:17 +0530
+Processing by ResumesController#index as HTML
+  [1m[35mResume Load (0.2ms)[0m  SELECT `resumes`.* FROM `resumes` 
+  Rendered resumes/index.html.erb within layouts/application (1.1ms)
+Compiled academics.css  (73ms)  (pid 2506)
+Compiled skills.css  (0ms)  (pid 2506)
+Compiled application.css  (85ms)  (pid 2506)
+Compiled academics.js  (124ms)  (pid 2506)
+Compiled skills.js  (0ms)  (pid 2506)
+Compiled application.js  (151ms)  (pid 2506)
+Completed 200 OK in 324ms (Views: 320.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-31 15:15:17 +0530
+Served asset /application.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/resumes.css?body=1" for 127.0.0.1 at 2012-10-31 15:15:17 +0530
+Served asset /resumes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/academics.css?body=1" for 127.0.0.1 at 2012-10-31 15:15:17 +0530
+Served asset /academics.css - 200 OK (5ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-10-31 15:15:17 +0530
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/skills.css?body=1" for 127.0.0.1 at 2012-10-31 15:15:17 +0530
+Served asset /skills.css - 200 OK (3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-31 15:15:17 +0530
+Served asset /jquery.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-31 15:15:17 +0530
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/academics.js?body=1" for 127.0.0.1 at 2012-10-31 15:15:17 +0530
+Served asset /academics.js - 200 OK (2ms)
+
+
+Started GET "/assets/resumes.js?body=1" for 127.0.0.1 at 2012-10-31 15:15:17 +0530
+Served asset /resumes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/skills.js?body=1" for 127.0.0.1 at 2012-10-31 15:15:17 +0530
+Served asset /skills.js - 200 OK (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-31 15:15:17 +0530
+Served asset /application.js - 304 Not Modified (5ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2012-10-31 15:16:08 +0530
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered /var/lib/gems/1.9.1/gems/devise-2.1.2/app/views/devise/shared/_links.erb (1.5ms)
+  Rendered /var/lib/gems/1.9.1/gems/devise-2.1.2/app/views/devise/registrations/new.html.erb within layouts/application (27.4ms)
+Completed 200 OK in 66ms (Views: 51.2ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-31 15:16:08 +0530
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/academics.css?body=1" for 127.0.0.1 at 2012-10-31 15:16:08 +0530
+Served asset /academics.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/resumes.css?body=1" for 127.0.0.1 at 2012-10-31 15:16:08 +0530
+Served asset /resumes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-10-31 15:16:08 +0530
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-31 15:16:08 +0530
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/skills.css?body=1" for 127.0.0.1 at 2012-10-31 15:16:08 +0530
+Served asset /skills.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-31 15:16:08 +0530
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/academics.js?body=1" for 127.0.0.1 at 2012-10-31 15:16:08 +0530
+Served asset /academics.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/resumes.js?body=1" for 127.0.0.1 at 2012-10-31 15:16:08 +0530
+Served asset /resumes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/skills.js?body=1" for 127.0.0.1 at 2012-10-31 15:16:08 +0530
+Served asset /skills.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-31 15:16:08 +0530
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2012-10-31 15:16:38 +0530
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WfSXc6+UHSUUuehTtNXchcXdQ0AAFkPOAwj+/hgb9kE=", "user"=>{"email"=>"rupu.urs@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.8ms)[0m  SELECT 1 AS one FROM `users` WHERE `users`.`email` = BINARY 'rupu.urs@gmail.com' LIMIT 1
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO `users` (`created_at`, `current_sign_in_at`, `current_sign_in_ip`, `email`, `encrypted_password`, `last_sign_in_at`, `last_sign_in_ip`, `password`, `remember_created_at`, `reset_password_sent_at`, `reset_password_token`, `sign_in_count`, `updated_at`) VALUES ('2012-10-31 09:46:39', NULL, NULL, 'rupu.urs@gmail.com', '$2a$10$8ECCvCEAB2obYnPQUDmLTOjHXWo81LV35znF6ZEp6f6IIFJ4rX0Rm', NULL, NULL, '', NULL, NULL, NULL, 0, '2012-10-31 09:46:39')[0m
+  [1m[35m (31.1ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.8ms)[0m  UPDATE `users` SET `last_sign_in_at` = '2012-10-31 09:46:39', `current_sign_in_at` = '2012-10-31 09:46:39', `last_sign_in_ip` = '127.0.0.1', `current_sign_in_ip` = '127.0.0.1', `sign_in_count` = 1, `updated_at` = '2012-10-31 09:46:39' WHERE `users`.`id` = 1
+  [1m[36m (27.1ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 206ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-31 15:16:39 +0530
+Processing by ResumesController#index as HTML
+  [1m[35mResume Load (0.2ms)[0m  SELECT `resumes`.* FROM `resumes` 
+  Rendered resumes/index.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed 200 OK in 30ms (Views: 28.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-31 15:16:39 +0530
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/resumes.css?body=1" for 127.0.0.1 at 2012-10-31 15:16:39 +0530
+Served asset /resumes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/skills.css?body=1" for 127.0.0.1 at 2012-10-31 15:16:39 +0530
+Served asset /skills.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/academics.css?body=1" for 127.0.0.1 at 2012-10-31 15:16:39 +0530
+Served asset /academics.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-10-31 15:16:39 +0530
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-31 15:16:39 +0530
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-31 15:16:39 +0530
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/academics.js?body=1" for 127.0.0.1 at 2012-10-31 15:16:39 +0530
+Served asset /academics.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/resumes.js?body=1" for 127.0.0.1 at 2012-10-31 15:16:39 +0530
+Served asset /resumes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/skills.js?body=1" for 127.0.0.1 at 2012-10-31 15:16:39 +0530
+Served asset /skills.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-31 15:16:39 +0530
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/skills" for 127.0.0.1 at 2012-10-31 15:17:05 +0530
+Processing by SkillsController#index as HTML
+  [1m[35mSkill Load (0.5ms)[0m  SELECT `skills`.* FROM `skills` 
+  Rendered skills/index.html.erb within layouts/application (0.8ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed 200 OK in 14ms (Views: 9.4ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-31 15:17:05 +0530
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/academics.css?body=1" for 127.0.0.1 at 2012-10-31 15:17:05 +0530
+Served asset /academics.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-10-31 15:17:05 +0530
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/resumes.css?body=1" for 127.0.0.1 at 2012-10-31 15:17:05 +0530
+Served asset /resumes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/skills.css?body=1" for 127.0.0.1 at 2012-10-31 15:17:05 +0530
+Served asset /skills.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-31 15:17:05 +0530
+Served asset /jquery.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-31 15:17:05 +0530
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/academics.js?body=1" for 127.0.0.1 at 2012-10-31 15:17:05 +0530
+Served asset /academics.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/resumes.js?body=1" for 127.0.0.1 at 2012-10-31 15:17:05 +0530
+Served asset /resumes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/skills.js?body=1" for 127.0.0.1 at 2012-10-31 15:17:05 +0530
+Served asset /skills.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-31 15:17:05 +0530
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/academics" for 127.0.0.1 at 2012-10-31 15:17:15 +0530
+Processing by AcademicsController#index as HTML
+  [1m[35mAcademic Load (0.5ms)[0m  SELECT `academics`.* FROM `academics` 
+  Rendered academics/index.html.erb within layouts/application (2.7ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed 200 OK in 27ms (Views: 21.5ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-31 15:17:16 +0530
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/academics.css?body=1" for 127.0.0.1 at 2012-10-31 15:17:16 +0530
+Served asset /academics.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/resumes.css?body=1" for 127.0.0.1 at 2012-10-31 15:17:16 +0530
+Served asset /resumes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-10-31 15:17:16 +0530
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/skills.css?body=1" for 127.0.0.1 at 2012-10-31 15:17:16 +0530
+Served asset /skills.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-31 15:17:16 +0530
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-31 15:17:16 +0530
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/academics.js?body=1" for 127.0.0.1 at 2012-10-31 15:17:16 +0530
+Served asset /academics.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/resumes.js?body=1" for 127.0.0.1 at 2012-10-31 15:17:16 +0530
+Served asset /resumes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/skills.js?body=1" for 127.0.0.1 at 2012-10-31 15:17:16 +0530
+Served asset /skills.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-31 15:17:16 +0530
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2012-10-31 15:17:19 +0530
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"WfSXc6+UHSUUuehTtNXchcXdQ0AAFkPOAwj+/hgb9kE="}
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+Redirected to http://localhost:3000/
+Completed 302 Found in 5ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-31 15:17:19 +0530
+Processing by ResumesController#index as HTML
+  [1m[36mResume Load (0.3ms)[0m  [1mSELECT `resumes`.* FROM `resumes` [0m
+  Rendered resumes/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 8ms (Views: 6.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-31 15:17:19 +0530
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/resumes.css?body=1" for 127.0.0.1 at 2012-10-31 15:17:19 +0530
+Served asset /resumes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/skills.css?body=1" for 127.0.0.1 at 2012-10-31 15:17:19 +0530
+Served asset /skills.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/academics.css?body=1" for 127.0.0.1 at 2012-10-31 15:17:19 +0530
+Served asset /academics.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-10-31 15:17:19 +0530
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-31 15:17:19 +0530
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-31 15:17:19 +0530
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/academics.js?body=1" for 127.0.0.1 at 2012-10-31 15:17:19 +0530
+Served asset /academics.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/resumes.js?body=1" for 127.0.0.1 at 2012-10-31 15:17:19 +0530
+Served asset /resumes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/skills.js?body=1" for 127.0.0.1 at 2012-10-31 15:17:19 +0530
+Served asset /skills.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-31 15:17:19 +0530
+Served asset /application.js - 304 Not Modified (1ms)

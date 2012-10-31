@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  qualification: MyString
+  institute: MyString
+  percentage: 1.5
+  year_of_passout: 1
+  user_id: 1
+
+two:
+  qualification: MyString
+  institute: MyString
+  percentage: 1.5
+  year_of_passout: 1
+  user_id: 1

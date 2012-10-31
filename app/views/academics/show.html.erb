@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Qualification:</b>
+  <%= @academic.qualification %>
+</p>
+
+<p>
+  <b>Institute:</b>
+  <%= @academic.institute %>
+</p>
+
+<p>
+  <b>Percentage:</b>
+  <%= @academic.percentage %>
+</p>
+
+<p>
+  <b>Year of passout:</b>
+  <%= @academic.year_of_passout %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%= @academic.user_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_academic_path(@academic) %> |
+<%= link_to 'Back', academics_path %>
