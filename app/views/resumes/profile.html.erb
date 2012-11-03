@@ -1,0 +1,24 @@
+<%= current_user.email %>
+<% unless @resume.nil? or @resume.blank? %>
+  <table>
+    <a href="/resumes/edit/<%= @resume.id %>">Edit</a>
+    <tr>
+      <th align="left">Name: </th><td><%= @resume.name %></td>
+    </tr>
+    <tr>
+      <th align="left">Phone Number: </th><td><%= @resume.phone_number %></td>
+    </tr>
+    <tr>
+      <th align="left">Date of Birth: </th><td><%= @resume.date_of_birth %></td>
+    </tr>
+    <tr>
+      <th align="left">Work Experience: </th><td><%= @resume.experience %></td>
+    </tr>
+  </table>
+<% else %>
+  <form action="/resumes/upload_file/<%= current_user.id %>" method="post" enctype="multipart/form-data">
+   <p><label for="upload_file">Select File</label>:
+     <input type="file" name="upload" size="50"/></p>
+   <input type="submit" value="Upload"/>
+  </form>  
+<% end %>

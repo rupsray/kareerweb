@@ -6,7 +6,6 @@ class AcademicsController < ApplicationController
 
     respond_to do |format|
       format.html # index.html.erb
-      format.json { render json: @academics }
     end
   end
 
@@ -17,7 +16,6 @@ class AcademicsController < ApplicationController
 
     respond_to do |format|
       format.html # show.html.erb
-      format.json { render json: @academic }
     end
   end
 
@@ -28,7 +26,6 @@ class AcademicsController < ApplicationController
 
     respond_to do |format|
       format.html # new.html.erb
-      format.json { render json: @academic }
     end
   end
 
@@ -44,11 +41,10 @@ class AcademicsController < ApplicationController
 
     respond_to do |format|
       if @academic.save
-        format.html { redirect_to @academic, notice: 'Academic was successfully created.' }
-        format.json { render json: @academic, status: :created, location: @academic }
+        redirect_to(@academic)
+        flash[:notice] = 'Academic was successfully created.'
       else
-        format.html { render action: "new" }
-        format.json { render json: @academic.errors, status: :unprocessable_entity }
+        render :file => "/academics/new"
       end
     end
   end
@@ -60,11 +56,11 @@ class AcademicsController < ApplicationController
 
     respond_to do |format|
       if @academic.update_attributes(params[:academic])
-        format.html { redirect_to @academic, notice: 'Academic was successfully updated.' }
+        redirect_to(@academic)
+        flash[:notice] ='Academic was successfully updated.'
         format.json { head :no_content }
       else
-        format.html { render action: "edit" }
-        format.json { render json: @academic.errors, status: :unprocessable_entity }
+        render :file => "/academics/edit"
       end
     end
   end

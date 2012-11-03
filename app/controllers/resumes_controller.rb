@@ -1,4 +1,7 @@
 class ResumesController < ApplicationController
+  before_filter :authenticate_user!
+  skip_before_filter :verify_authenticity_token, :only => "upload_file"
+
   # GET /resumes
   # GET /resumes.json
   def index
@@ -6,7 +9,6 @@ class ResumesController < ApplicationController
 
     respond_to do |format|
       format.html # index.html.erb
-      format.json { render json: @resumes }
     end
   end
 
@@ -17,7 +19,6 @@ class ResumesController < ApplicationController
 
     respond_to do |format|
       format.html # show.html.erb
-      format.json { render json: @resume }
     end
   end
 
@@ -28,7 +29,6 @@ class ResumesController < ApplicationController
 
     respond_to do |format|
       format.html # new.html.erb
-      format.json { render json: @resume }
     end
   end
 
@@ -42,30 +42,25 @@ class ResumesController < ApplicationController
   def create
     @resume = Resume.new(params[:resume])
 
-    respond_to do |format|
       if @resume.save
-        format.html { redirect_to @resume, notice: 'Resume was successfully created.' }
-        format.json { render json: @resume, status: :created, location: @resume }
+        flash[:notice] = 'Resume was successfully created.'
+        redirect_to @resume
       else
-        format.html { render action: "new" }
-        format.json { render json: @resume.errors, status: :unprocessable_entity }
+        render :file => "/resumes/new"
       end
-    end
   end
 
   # PUT /resumes/1
   # PUT /resumes/1.json
   def update
     @resume = Resume.find(params[:id])
-
-    respond_to do |format|
-      if @resume.update_attributes(params[:resume])
-        format.html { redirect_to @resume, notice: 'Resume was successfully updated.' }
-        format.json { head :no_content }
-      else
-        format.html { render action: "edit" }
-        format.json { render json: @resume.errors, status: :unprocessable_entity }
-      end
+    
+    if @resume.update_attributes(params[:resume])
+      logger.info"UPDATED"
+      flash[:notice] = 'Resume was successfully updated.'
+      redirect_to("/resumes/profile/#{current_user.id}")
+    else
+      render :file => "/resumes/edit"
     end
   end
 
@@ -78,6 +73,36 @@ class ResumesController < ApplicationController
     respond_to do |format|
       format.html { redirect_to resumes_url }
       format.json { head :no_content }
+    end
+  end
+
+  def profile
+    logger.info"PROFILE"
+    @resume = current_user.resume
+    @skills = current_user.skills
+    @academics = current_user.academics
+  end
+
+  def upload_file
+    logger.info"UPLOAD PARAMS #{params.inspect}"
+    tempfile = params[:upload].tempfile
+    original_filename = params[:upload].original_filename
+    upload_path = "public/resumes/#{current_user.id}/"
+    FileUtils.mkdir_p(upload_path)
+    path = upload_path + original_filename
+    FileUtils.cp tempfile.path, path
+    resume = Resume.new
+    resume.name = "Surupa"
+    resume.phone_number = "9032652151".to_i
+    resume.experience = 3
+    resume.user_id = current_user.id
+    if resume.save
+      flash[:notice] = "File uploaded successfully"
+      redirect_to("/resumes/profile/#{current_user.id}")
+    else
+      FileUtils.rm_r path
+      flash[:notice] = "Please upload a proper file"
+      redirect_to("/resumes/profile/#{current_user.id}")
     end
   end
 end

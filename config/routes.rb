@@ -7,7 +7,8 @@ Kareerweb::Application.routes.draw do
   devise_for :users
 
   resources :resumes
-  root :to => "resumes#index"
+  root :to => "resumes#profile"
+  match '/:controller/:action/:id' => '#index'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
