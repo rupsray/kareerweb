@@ -84,13 +84,21 @@ class ResumesController < ApplicationController
   end
 
   def upload_file
-    logger.info"UPLOAD PARAMS #{params.inspect}"
     tempfile = params[:upload].tempfile
     original_filename = params[:upload].original_filename
     upload_path = "public/resumes/#{current_user.id}/"
     FileUtils.mkdir_p(upload_path)
     path = upload_path + original_filename
     FileUtils.cp tempfile.path, path
+    Zip::ZipFile.open(path) do |files|
+      files.each do |file|
+        f_path = upload_path + "/original/" + file.name
+        FileUtils.mkdir_p(File.dirname(f_path))
+        fileq.extract(file, f_path) unless File.exist?(f_path)
+      end
+    end
+    parser_controller_obj = ParserController.new
+    parser_controller_obj.parse()
     resume = Resume.new
     resume.name = "Surupa"
     resume.phone_number = "9032652151".to_i
