@@ -1,3 +1,4 @@
+require 'zip/zip'
 class ResumesController < ApplicationController
   before_filter :authenticate_user!
   skip_before_filter :verify_authenticity_token, :only => "upload_file"
@@ -77,15 +78,31 @@ class ResumesController < ApplicationController
   end
 
   def profile
-    logger.info"PROFILE"
     @resume = current_user.resume
     @skills = current_user.skills
     @academics = current_user.academics
   end
 
   def upload_file
-    tempfile = params[:upload].tempfile
-    original_filename = params[:upload].original_filename
+    save_resume(params[:upload].tempfile,params[:upload].original_filename)
+    parser_controller_obj = ParserController.new
+    parser_controller_obj.parse(current_user)
+    # resume = Resume.new
+    # resume.name = "Surupa"
+    # resume.phone_number = "9032652151".to_i
+    # resume.experience = 3
+    # resume.user_id = current_user.id
+    # if resume.save
+    #   flash[:notice] = "File uploaded successfully"
+    #   redirect_to("/resumes/profile/#{current_user.id}")
+    # else
+    #   FileUtils.rm_r path
+    #   flash[:notice] = "Please upload a proper file"
+      redirect_to("/resumes/profile/#{current_user.id}")
+    # end
+  end
+
+  def save_resume(tempfile,original_filename)
     upload_path = "public/resumes/#{current_user.id}/"
     FileUtils.mkdir_p(upload_path)
     path = upload_path + original_filename
@@ -94,23 +111,9 @@ class ResumesController < ApplicationController
       files.each do |file|
         f_path = upload_path + "/original/" + file.name
         FileUtils.mkdir_p(File.dirname(f_path))
-        fileq.extract(file, f_path) unless File.exist?(f_path)
+        files.extract(file, f_path) unless File.exist?(f_path)
       end
     end
-    parser_controller_obj = ParserController.new
-    parser_controller_obj.parse()
-    resume = Resume.new
-    resume.name = "Surupa"
-    resume.phone_number = "9032652151".to_i
-    resume.experience = 3
-    resume.user_id = current_user.id
-    if resume.save
-      flash[:notice] = "File uploaded successfully"
-      redirect_to("/resumes/profile/#{current_user.id}")
-    else
-      FileUtils.rm_r path
-      flash[:notice] = "Please upload a proper file"
-      redirect_to("/resumes/profile/#{current_user.id}")
-    end
   end
+
 end
