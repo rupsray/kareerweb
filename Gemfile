@@ -26,6 +26,7 @@ gem 'jquery-rails'
 gem 'devise'
 gem 'execjs'
 gem 'therubyracer'
+
 # gem 'rubyzip'
 
 group :production do
